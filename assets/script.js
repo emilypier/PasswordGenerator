@@ -1,6 +1,5 @@
-var generateBtn = document.querySelector("#generate"); //from starter code
-var passwordEl = document.querySelector("#password"); //will be finished password?
-
+var generateBtn = document.querySelector("#generate");
+var passwordEl = document.querySelector("#password");
 
 
 //declaring function to choose lowercase, uppercase, or both
@@ -18,17 +17,17 @@ var askPasswordCase = function() {
 
   if (promptCase === "lower") {
     passwordCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    chooseNumber(); //calling chooseNumber function
+    chooseNumber();
   }
 
   if (promptCase === "upper") {
     passwordCase =["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-    chooseNumber(); //calling chooseNumber function
+    chooseNumber();
   }
 
   if (promptCase === "both") {
     passwordCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-    chooseNumber(); //calling chooseNumber function
+    chooseNumber();
   }
 };
 
@@ -58,11 +57,10 @@ function chooseNumber() {
   //if they type number between 8-128
   else (passwordLength >= 8 && passwordLength <= 128); {
     //combine all arrays to make one big array
-    combinedArray();
     function combinedArray() {
       newArray = [].concat(specialChar, passwordCase);
-      // generatePassword(); //calling generatePassword function
     }
+    combinedArray();
 
 
     //function to generate password
@@ -98,7 +96,7 @@ function chooseNumber() {
   //SECOND PROMPT
   //function to say if they want numbers
   function askNumbers() {
-    var promptNumbers = window.prompt("Do you want your password to include numbers?");
+    var promptNumbers = window.prompt('Do you want your password to include numbers? Please type "yes" or "no".');
     
     //if they don't enter valid answer
     if (promptNumbers === "" || promptNumbers === null) {
@@ -111,12 +109,12 @@ function chooseNumber() {
 
     if (promptNumbers === "no") {
       numericChar = [""];
-      askPasswordCase(); //calling passwordCase function
+      askPasswordCase();
     }
   
     if (promptNumbers === "yes") {
       numericChar = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-      askPasswordCase(); //calling passwordCase function
+      askPasswordCase();
     }
   };
 
@@ -125,7 +123,7 @@ function chooseNumber() {
 generateBtn.addEventListener("click", specialOrReg);
   //function to say if they want special characters
   function specialOrReg() {
-    var promptCharacters = window.prompt("Do you want your password to include special characters?");
+    var promptCharacters = window.prompt('Do you want your password to include special characters? Please type "yes" or "no".');
     
     //if they don't enter valid answer
     if (promptCharacters === "" || promptCharacters === null) {
