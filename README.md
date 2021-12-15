@@ -12,6 +12,7 @@ A website that offers
 * Javascript
 
 ## Website
+https://emilypier.github.io/PasswordGenerator/
 
 ## Made by 
 Emily Pierson
