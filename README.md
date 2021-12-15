@@ -1,7 +1,7 @@
 # Password Generator
 
 ## Description
-A website that offers
+A website that allows users to specify which characters they want in their password, then generates it on the page.
 
 ## Image
 ![Image of Password Generator.](./assets/images/password-generator-screenshot.png) 
